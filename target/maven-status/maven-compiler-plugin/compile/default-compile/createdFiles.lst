@@ -1,0 +1,9 @@
+com/rubber_duck/rest/services/AlarmService.class
+com/rubber_duck/rest/controller/AlarmController.class
+com/rubber_duck/rest/controller/MotionController.class
+com/rubber_duck/rest/ServiceApplication.class
+com/rubber_duck/rest/repositories/MotionRepository.class
+com/rubber_duck/rest/models/Motion.class
+com/rubber_duck/rest/models/Alarm.class
+com/rubber_duck/rest/repositories/AlarmRepository.class
+com/rubber_duck/rest/services/MotionService.class

@@ -1,0 +1,9 @@
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/ServiceApplication.java
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/repositories/MotionRepository.java
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/services/MotionService.java
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/controller/AlarmController.java
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/models/Alarm.java
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/services/AlarmService.java
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/controller/MotionController.java
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/models/Motion.java
+/home/simon/Documents/HouseGuardServices/Service/src/main/java/com/rubber_duck/rest/repositories/AlarmRepository.java
