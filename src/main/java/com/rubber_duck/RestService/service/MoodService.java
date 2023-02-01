@@ -1,11 +1,11 @@
-package com.rubber_duck.RestService.services;
+package com.rubber_duck.RestService.service;
 
 import java.time.Instant;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rubber_duck.RestService.models.Mood;
+import com.rubber_duck.RestService.model.Mood;
 import com.rubber_duck.RestService.repository.MoodRepository;
 
 @Service

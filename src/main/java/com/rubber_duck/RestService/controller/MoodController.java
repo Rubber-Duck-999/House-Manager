@@ -8,8 +8,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rubber_duck.RestService.models.Mood;
-import com.rubber_duck.RestService.services.MoodService;
+import com.rubber_duck.RestService.model.Mood;
+import com.rubber_duck.RestService.service.MoodService;
 
 @RestController
 public class MoodController {

@@ -1,4 +1,4 @@
-package com.rubber_duck.RestService.models;
+package com.rubber_duck.RestService.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;

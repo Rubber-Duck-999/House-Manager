@@ -10,8 +10,8 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rubber_duck.RestService.models.Motion;
-import com.rubber_duck.RestService.services.MotionService;
+import com.rubber_duck.RestService.model.Motion;
+import com.rubber_duck.RestService.service.MotionService;
 
 @RestController
 public class MotionController {

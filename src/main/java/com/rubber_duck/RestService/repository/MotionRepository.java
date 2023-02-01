@@ -7,7 +7,7 @@ import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.data.mongodb.repository.Query;
 import org.springframework.stereotype.Repository;
 
-import com.rubber_duck.RestService.models.Motion;
+import com.rubber_duck.RestService.model.Motion;
 
 @Repository
 public interface MotionRepository extends MongoRepository<Motion, String> {

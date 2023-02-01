@@ -1,4 +1,4 @@
-package com.rubber_duck.RestService.services;
+package com.rubber_duck.RestService.service;
 
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
@@ -8,7 +8,7 @@ import java.util.UUID;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rubber_duck.RestService.models.Motion;
+import com.rubber_duck.RestService.model.Motion;
 import com.rubber_duck.RestService.repository.MotionRepository;
 
 @Service

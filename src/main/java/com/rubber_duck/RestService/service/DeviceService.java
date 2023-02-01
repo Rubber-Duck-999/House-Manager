@@ -1,11 +1,11 @@
-package com.rubber_duck.RestService.services;
+package com.rubber_duck.RestService.service;
 
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.rubber_duck.RestService.models.Device;
+import com.rubber_duck.RestService.model.Device;
 import com.rubber_duck.RestService.repository.DeviceRepository;
 
 @Service

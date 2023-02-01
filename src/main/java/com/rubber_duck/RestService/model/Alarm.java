@@ -1,4 +1,4 @@
-package com.rubber_duck.RestService.models;
+package com.rubber_duck.RestService.model;
 
 import java.time.Instant;
 
@@ -12,8 +12,8 @@ import lombok.Setter;
 
 @Getter
 @Setter
-@Document(collection = "mood")
-public class Mood {
+@Document(collection = "alarm")
+public class Alarm {
     @MongoId
     private String id;
     private String state;

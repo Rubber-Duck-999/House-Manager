@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rubber_duck.RestService.models.Temperature;
-import com.rubber_duck.RestService.services.TemperatureService;
+import com.rubber_duck.RestService.model.Temperature;
+import com.rubber_duck.RestService.service.TemperatureService;
 
 @RestController
 public class TemperatureController {

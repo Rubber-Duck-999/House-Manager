@@ -9,8 +9,8 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.rubber_duck.RestService.models.Network;
-import com.rubber_duck.RestService.services.NetworkService;
+import com.rubber_duck.RestService.model.Network;
+import com.rubber_duck.RestService.service.NetworkService;
 
 @RestController
 public class NetworkController {
