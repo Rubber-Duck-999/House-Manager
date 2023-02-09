@@ -26,7 +26,7 @@ public class NetworkController {
         return new ResponseEntity<>(networkList, HttpStatus.OK);
     }
 
-    @PostMapping("/network")
+    @PostMapping("/network/{download}/{upload}")
     ResponseEntity<Network> createTemperature(@PathVariable("download") Double download, @PathVariable("upload") Double upload) {
         return new ResponseEntity<>(networkService.createNetwork(download, upload), HttpStatus.OK);
     }
