@@ -21,7 +21,7 @@ public class AlarmService {
         alarm.setId(this.alarmId);
         alarm.setState("ON");
         alarm.setUpdatedTime(Instant.now());
-        return alarm;
+        return alarmRepository.save(alarm);
     }
 
     public Alarm getAlarm() {

@@ -21,7 +21,7 @@ public class MoodService {
         mood.setId(this.moodId);
         mood.setState("ON");
         mood.setUpdatedTime(Instant.now());
-        return mood;
+        return moodRepository.save(mood);
     }
 
     public Mood getMood() {
