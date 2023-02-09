@@ -8,6 +8,7 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rubber_duck.RestService.model.Temperature;
@@ -26,8 +27,8 @@ public class TemperatureController {
         return new ResponseEntity<>(temperatureList, HttpStatus.OK);
     }
     
-    @PostMapping("/temperature/{temp}")
-    ResponseEntity<Temperature> createTemperature(@PathVariable Integer temp) {
+    @PostMapping("/temperature")
+    ResponseEntity<Temperature> createTemperature(@RequestParam Double temp) {
         return new ResponseEntity<>(temperatureService.createTemperature(temp), HttpStatus.OK);
     }
 

@@ -23,7 +23,7 @@ public class TemperatureService {
         return temperatureRepository.findByDays(value);
     }
     
-    public Temperature createTemperature(Integer temp) {
+    public Temperature createTemperature(Double temp) {
         Temperature temperature = new Temperature();
         temperature.setId(UUID.randomUUID().toString());
         temperature.setTemperature(temp);
