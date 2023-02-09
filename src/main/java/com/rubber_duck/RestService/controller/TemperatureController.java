@@ -28,8 +28,8 @@ public class TemperatureController {
     }
     
     @PostMapping("/temperature")
-    ResponseEntity<Temperature> createTemperature(@RequestBody String temperature) {
-        return new ResponseEntity<>(temperatureService.createTemperature(Double.parseDouble(temperature)), HttpStatus.OK);
+    ResponseEntity<Temperature> createTemperature(@RequestBody Double temperature) {
+        return new ResponseEntity<>(temperatureService.createTemperature(temperature), HttpStatus.OK);
     }
 
 }
