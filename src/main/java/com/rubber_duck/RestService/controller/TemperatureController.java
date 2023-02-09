@@ -27,7 +27,7 @@ public class TemperatureController {
     }
     
     @PostMapping("/temperature/{temperature}")
-    ResponseEntity<Temperature> createTemperature(@PathVariable Double temperature) {
+    ResponseEntity<Temperature> createTemperature(@PathVariable Integer temperature) {
         return new ResponseEntity<>(temperatureService.createTemperature(temperature), HttpStatus.OK);
     }
 

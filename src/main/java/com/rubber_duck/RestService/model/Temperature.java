@@ -18,5 +18,5 @@ public class Temperature {
     private String id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Instant created;
-    private Double temperature;
+    private Integer temperature;
 }
