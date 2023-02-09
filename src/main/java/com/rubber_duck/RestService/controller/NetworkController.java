@@ -7,6 +7,7 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.rubber_duck.RestService.model.Network;
@@ -23,5 +24,10 @@ public class NetworkController {
         Integer intDays = Integer.parseInt(days);
         List<Network> networkList = networkService.listNetwork(intDays);
         return new ResponseEntity<>(networkList, HttpStatus.OK);
+    }
+
+    @PostMapping("/network")
+    ResponseEntity<Network> createTemperature(@PathVariable("download") Double download, @PathVariable("upload") Double upload) {
+        return new ResponseEntity<>(networkService.createNetwork(download, upload), HttpStatus.OK);
     }
 }
