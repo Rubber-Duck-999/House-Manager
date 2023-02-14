@@ -4,6 +4,7 @@ import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -30,9 +31,17 @@ public class MotionController {
     }
 
     @GetMapping("/motion/list/{days}")
-    ResponseEntity<List<Motion>> getMotion(@PathVariable String days) {
+    ResponseEntity<List<Motion>> listMotion(@PathVariable String days) {
         Integer intDays = Integer.parseInt(days);
         List<Motion> motionList = motionService.listMotion(intDays);
         return new ResponseEntity<>(motionList, HttpStatus.OK);
+    }
+
+    @GetMapping("/motion/{name}")
+    ResponseEntity<?> getMotionImage(@PathVariable String name) {
+        byte[] image = motionService.getMotion(name);
+        return ResponseEntity.status(HttpStatus.OK)
+                .contentType(MediaType.valueOf("image/png"))
+                .body(image);
     }
 }

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
+import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
@@ -32,8 +33,10 @@ public class MotionService {
             motion.setId(UUID.randomUUID().toString());
             Image image = new Image();
             image.setId(UUID.randomUUID().toString());
+            image.setName(file.getOriginalFilename());
             byte[] bytes = ImageUtil.compressImage(file.getBytes());
             image.setImage(bytes);
+            image.setType("png");
             imageRepository.save(image);
             Motion createdMotion = motionRepository.save(motion);
             if (createdMotion.getId().equals(motion.getId())) {
@@ -49,5 +52,14 @@ public class MotionService {
         Instant now = Instant.now();
         Instant value = now.minus(days, ChronoUnit.DAYS);
         return motionRepository.findByDays(value);
+    }
+
+    public byte[] getMotion(String name) {
+        Image image = imageRepository.findByName(name);
+        if (image != null) {
+            byte[] bytes = ImageUtil.decompressImage(image.getImage());
+            return bytes;
+        }
+        return new byte[0];
     }
 }
