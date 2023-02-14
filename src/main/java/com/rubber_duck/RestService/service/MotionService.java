@@ -1,5 +1,6 @@
 package com.rubber_duck.RestService.service;
 
+import java.io.IOException;
 import java.time.Instant;
 import java.time.temporal.ChronoUnit;
 import java.util.List;
@@ -7,9 +8,13 @@ import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+import org.springframework.web.multipart.MultipartFile;
 
+import com.rubber_duck.RestService.model.Image;
 import com.rubber_duck.RestService.model.Motion;
+import com.rubber_duck.RestService.repository.ImageRepository;
 import com.rubber_duck.RestService.repository.MotionRepository;
+import com.rubber_duck.RestService.util.ImageUtil;
 
 @Service
 public class MotionService {
@@ -17,13 +22,25 @@ public class MotionService {
     @Autowired
     private MotionRepository motionRepository;
 
-    public boolean createMotion() {
+    @Autowired
+    private ImageRepository imageRepository;
+
+    public boolean createMotion(MultipartFile file) {
         Motion motion = new Motion();
-        motion.setDetectedTime(Instant.now());
-        motion.setId(UUID.randomUUID().toString());
-        Motion createdMotion = motionRepository.save(motion);
-        if (createdMotion.getId().equals(motion.getId())) {
-            return true;
+        try {
+            motion.setDetectedTime(Instant.now());
+            motion.setId(UUID.randomUUID().toString());
+            Image image = new Image();
+            image.setId(UUID.randomUUID().toString());
+            byte[] bytes = ImageUtil.compressImage(file.getBytes());
+            image.setImage(bytes);
+            imageRepository.save(image);
+            Motion createdMotion = motionRepository.save(motion);
+            if (createdMotion.getId().equals(motion.getId())) {
+                return true;
+            }
+        } catch (IOException error) {
+            System.out.println("IOException found: " + error);
         }
         return false;
     }

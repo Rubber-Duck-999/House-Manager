@@ -8,7 +8,9 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.multipart.MultipartFile;
 
 import com.rubber_duck.RestService.model.Motion;
 import com.rubber_duck.RestService.service.MotionService;
@@ -20,8 +22,8 @@ public class MotionController {
     private MotionService motionService;
 
     @PostMapping("/motion")
-    ResponseEntity<Void> createMotion() {
-        if (motionService.createMotion()) {
+    ResponseEntity<Void> createMotion(@RequestParam("image") MultipartFile file) {
+        if (motionService.createMotion(file)) {
             return new ResponseEntity<>(HttpStatus.OK);
         }
         return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
