@@ -16,4 +16,6 @@ public class Motion {
     private String id;
     @JsonFormat(shape = JsonFormat.Shape.STRING)
     private Instant detectedTime;
+    private String type;
+	private byte[] image;
 }

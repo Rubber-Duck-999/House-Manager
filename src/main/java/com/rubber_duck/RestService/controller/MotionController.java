@@ -24,10 +24,8 @@ public class MotionController {
 
     @PostMapping("/motion")
     ResponseEntity<Void> createMotion(@RequestParam("image") MultipartFile file) {
-        if (motionService.createMotion(file)) {
-            return new ResponseEntity<>(HttpStatus.OK);
-        }
-        return new ResponseEntity<>(HttpStatus.BAD_REQUEST);
+        motionService.createMotion(file);
+        return new ResponseEntity<>(HttpStatus.OK);
     }
 
     @GetMapping("/motion/list/{days}")
@@ -37,9 +35,9 @@ public class MotionController {
         return new ResponseEntity<>(motionList, HttpStatus.OK);
     }
 
-    @GetMapping("/motion/{name}")
-    ResponseEntity<?> getMotionImage(@PathVariable String name) {
-        byte[] image = motionService.getMotion(name);
+    @GetMapping("/motion/{id}")
+    ResponseEntity<?> getMotionImage(@PathVariable String id) {
+        byte[] image = motionService.getMotion(id);
         return ResponseEntity.status(HttpStatus.OK)
                 .contentType(MediaType.valueOf("image/png"))
                 .body(image);
