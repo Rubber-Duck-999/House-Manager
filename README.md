@@ -4,7 +4,7 @@
 
 Data service used to manage house guard data
 
-[OPENAPI](.openapi.json)
+[OPENAPI](.swagger.json)
 
 ```mermaid
 graph TD;
