@@ -14,4 +14,9 @@ public class Device {
     @MongoId
     private String id;
     private String name;
+    private String ipAddress;
+    private String macAddress;
+    private String createdBy;
+    private String type;
+    private String online;
 }
