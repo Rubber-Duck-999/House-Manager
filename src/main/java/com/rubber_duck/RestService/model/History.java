@@ -1,16 +1,23 @@
 package com.rubber_duck.RestService.model;
 
+import java.time.Instant;
+
 import org.springframework.data.mongodb.core.mapping.Document;
+import org.springframework.data.mongodb.core.mapping.MongoId;
+
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import lombok.Getter;
 import lombok.Setter;
 
 @Getter
 @Setter
-@Document(collection="device-history")
+@Document(collection="history")
 public class History {
-    private String date;
-    private String customerId;
-    private String amount;
-    private String price;
+
+    @MongoId
+    private String id;
+    @JsonFormat(shape = JsonFormat.Shape.STRING)
+    private Instant created;
+    private String user;
 }

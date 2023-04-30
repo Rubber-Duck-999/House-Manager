@@ -1,5 +1,7 @@
 package com.rubber_duck.RestService.model;
 
+import java.util.List;
+
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.mapping.MongoId;
 
@@ -19,4 +21,5 @@ public class Device {
     private String createdBy;
     private String type;
     private String online;
+    private List<History> history;
 }
