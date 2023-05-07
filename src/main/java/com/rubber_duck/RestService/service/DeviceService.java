@@ -20,6 +20,11 @@ public class DeviceService {
     @Autowired
     private HistoryRepository historyRepository;
 
+    public String createDevice(Device device) {
+        device.setCreatedBy("user");
+        return deviceRepository.save(device).getId();
+    }
+
     public Device getDevice(String name) {
         return deviceRepository.findAllByName(name);
     }
