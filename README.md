@@ -1,15 +1,11 @@
-# House Data Service
+# House Manager
 
 [![Maven Pipeline](https://github.com/Rubber-Duck-999/RestService/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/Rubber-Duck-999/RestService/actions/workflows/maven-publish.yml)
 
-Data service used to manage house guard data
+Stack used to manage house services
 
 [OPENAPI](https://github.com/Rubber-Duck-999/HouseDataService/blob/main/swagger.json)
 
-```mermaid
-graph TD;
-    A-->B;
-    A-->C;
-    B-->D;
-    C-->D;
-```
+## Service
+
+[README](./data-service/README.md)
