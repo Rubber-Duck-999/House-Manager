@@ -3,10 +3,6 @@ services:
   mongo_db:
     image: "mongo:4.4.3"
     restart: always
-    ports:
-      - 27017:27017
-    networks:
-      - spring-postgres
   service:
     image: 'maven:latest'
     build:
@@ -14,9 +10,5 @@ services:
     container_name: app
     depends_on:
       - mongo_db
-    networks:
-      - spring-postgres
-networks:
-  spring-postgres:
-volumes:
-  mongodb_data_container:
+    ports:
+    - 5000:5000

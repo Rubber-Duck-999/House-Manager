@@ -21,7 +21,7 @@ public class NetworkController {
     private NetworkService networkService;
 
     @GetMapping("/network/list/{days}")
-    public ResponseEntity<List<Network>> listTemperature(@PathVariable String days) {
+    public ResponseEntity<List<Network>> listDevices(@PathVariable String days) {
         Integer intDays = Integer.parseInt(days);
         List<Network> networkList = networkService.listNetwork(intDays);
         return new ResponseEntity<>(networkList, HttpStatus.OK);

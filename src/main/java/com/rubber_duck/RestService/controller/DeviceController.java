@@ -18,6 +18,8 @@ public class DeviceController {
     @Autowired
     private DeviceService deviceService;
 
+
+
     @GetMapping("/device/{name}")
     public ResponseEntity<Device> getDevice(@PathVariable String name) {
         return new ResponseEntity(deviceService.getDevice(name), HttpStatus.OK);
