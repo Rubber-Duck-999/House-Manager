@@ -1,10 +1,12 @@
 import React from 'react';
+import AlarmCard from '../components/chakra_card';
+import Title from '../components/title';
 
 function Alarm() {
   return (
     <div>
-      <h2>Alarm</h2>
-      This example shows how to use React Router!
+      <Title title={"House Alarm Status"}/>
+      <AlarmCard/>
     </div>
   );
 };

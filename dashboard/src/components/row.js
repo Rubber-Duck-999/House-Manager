@@ -26,6 +26,8 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
 export default function Row({ row }) {
     const [open, setOpen] = React.useState(false);
 
+    const trusted = row.trusted === null ? "Untrusted" : "Trusted";
+
     return (
         <React.Fragment>
             <StyledTableRow sx={{ '& > *': { borderBottom: 'unset' } }}>
@@ -43,6 +45,7 @@ export default function Row({ row }) {
                         GetDeviceBadge(row)
                     }
                 </StyledTableCell>
+                <StyledTableCell align="right">{trusted}</StyledTableCell>
                 <StyledTableCell align="right">{row.ipAddress}</StyledTableCell>
                 <StyledTableCell align="right">{row.macAddress}</StyledTableCell>
                 <StyledTableCell align="right">{row.createdBy}</StyledTableCell>

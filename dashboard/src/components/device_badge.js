@@ -6,7 +6,7 @@ import SportsEsportsIcon from '@mui/icons-material/SportsEsports';
 
 export default function GetDeviceBadge(device) {
     const colour = device.online ? "success" : "default";
-    const trusted = device.createdBy === 'user' ? "primary" : "error";
+    
 
     const chip = (device) => {
         if (device.type == "laptop") {
@@ -34,10 +34,7 @@ export default function GetDeviceBadge(device) {
     }
 
     return (
-        <Badge
-            variant="dot"
-            color={trusted}
-        >
+        <Badge>
             {
                 chip(device)
             }

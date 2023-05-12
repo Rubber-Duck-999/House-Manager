@@ -5,7 +5,6 @@ import {
   BrowserRouter,
   Routes
 } from "react-router-dom";
-import { Box, Typography } from '@mui/material';
 import Navigation from './components/navigation';
 import Home from './pages/Home';
 import Sensor from './pages/Sensors';

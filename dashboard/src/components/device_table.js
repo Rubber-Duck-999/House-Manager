@@ -9,7 +9,7 @@ import { StyledTableCell } from '../common/styles';
 import Row from './row';
 
 
-export default function CollapsibleTable({data}) {
+export default function DeviceTable({data}) {
   return (
     <TableContainer component={Paper}
       sx={{
@@ -19,11 +19,12 @@ export default function CollapsibleTable({data}) {
         border: "1px solid rgba(0,0,0,0)"
       }}
     >
-      <Table aria-label="collapsible table">
+      <Table aria-label="device-table">
         <TableHead>
           <TableRow>
             <StyledTableCell />
             <StyledTableCell>Device Name</StyledTableCell>
+            <StyledTableCell align="right">Trusted</StyledTableCell>
             <StyledTableCell align="right">IP Address</StyledTableCell>
             <StyledTableCell align="right">MAC Address</StyledTableCell>
             <StyledTableCell align="right">Created By</StyledTableCell>

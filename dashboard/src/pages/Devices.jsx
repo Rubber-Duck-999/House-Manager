@@ -7,7 +7,7 @@ import {
     Chip
 } from '@mui/material/';
 import { ValidateDeviceData } from '../validators/device';
-import CollapsibleTable from '../components/table';
+import DeviceTable from '../components/device_table';
 import CreateIcon from '@mui/icons-material/Create';
 import FormDialog from '../components/create_form_dialog';
 import Title from '../components/title';
@@ -39,7 +39,7 @@ function Devices() {
         <Card>
             <CardContent>
                 {data != null &&
-                <CollapsibleTable data={data} />}
+                <DeviceTable data={data} />}
                 <CardActions>
                     <Chip
                         icon={<CreateIcon />}
