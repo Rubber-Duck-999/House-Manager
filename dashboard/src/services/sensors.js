@@ -1,7 +1,7 @@
 async function GetSensorData() {
   let json = null;
   try {
-    const response =  await fetch(`http://192.168.1.216:5000/sensor/list`);
+    const response =  await fetch(`http://localhost:5000/sensor/list`);
 
     if(response.status != 200) {
       console.log(response);
