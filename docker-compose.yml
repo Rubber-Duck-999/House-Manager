@@ -3,6 +3,14 @@ services:
   mongo_db:
     image: "mongo:4.4.3"
     restart: always
+    depends_on:
+    - mongo_seed
+  mongo_seed:
+    image: "mongo:4.4.3"
+    volumes:
+      - ./db_files:/db_files
+    command:
+      /db_files/import.sh
   service:
     image: 'maven:latest'
     build:
