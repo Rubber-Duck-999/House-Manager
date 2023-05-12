@@ -6,7 +6,7 @@ services:
   service:
     image: 'maven:latest'
     build:
-      context: .
+      context: ./data-service/
     container_name: app
     depends_on:
       - mongo_db
