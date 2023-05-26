@@ -12,6 +12,7 @@ import Alarm from './pages/Alarm';
 import Mood from './pages/Mood';
 import Devices from './pages/Devices';
 import Network from './pages/Network';
+import Faq from './pages/Faq';
 
 function App() {
 
@@ -25,6 +26,7 @@ function App() {
         <Route path="/devices" element={<Devices />} />
         <Route path="/sensors" element={<Sensor />} />
         <Route path="/network" element={<Network />} />
+        <Route path="/faqs" element={<Faq/>} />
       </Routes>
     </BrowserRouter>
   );

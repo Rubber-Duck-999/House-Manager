@@ -12,7 +12,6 @@ services:
     command:
       /db_files/import.sh
   service:
-    image: 'maven:latest'
     build:
       context: ./data-service/
     container_name: app
@@ -20,3 +19,11 @@ services:
       - mongo_db
     ports:
     - 5000:5000
+  dashboard:
+    build:
+      context: ./dashboard/
+    container_name: dashboard
+    depends_on:
+      - service
+    ports:
+    - 3000:3000

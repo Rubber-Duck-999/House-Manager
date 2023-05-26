@@ -23,6 +23,10 @@ const pages = [
       name: "Sensors",
       url: "/sensors"
     },
+    {
+      name: "FAQs",
+      url: "/faqs"
+    }
   ];
 
 export default pages;

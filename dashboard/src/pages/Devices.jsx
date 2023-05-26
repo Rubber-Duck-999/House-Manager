@@ -35,24 +35,24 @@ function Devices() {
 
     return (
         <div>
-        <Title title="Network Devices"/>
-        <Card>
-            <CardContent>
-                {data != null &&
-                <DeviceTable data={data} />}
-                <CardActions>
-                    <Chip
-                        icon={<CreateIcon />}
-                        label="Create"
-                        color="primary"
-                        onClick={handleClickOpen}
-                    />
-                    {
-                        FormDialog(open, handleClose)
-                    }
-                </CardActions>
-            </CardContent>
-        </Card>
+            <Title title="Network Devices" />
+            <Card>
+                <CardContent>
+                    {data != null &&
+                        <DeviceTable data={data} />}
+                    <CardActions>
+                        <Chip
+                            icon={<CreateIcon />}
+                            label="Create"
+                            color="primary"
+                            onClick={handleClickOpen}
+                        />
+                        {
+                            FormDialog(open, handleClose)
+                        }
+                    </CardActions>
+                </CardContent>
+            </Card>
         </div>
     );
 }
