@@ -4,7 +4,7 @@
 
 Stack used to manage house services
 
-[OPENAPI](https://github.com/Rubber-Duck-999/HouseDataService/blob/main/swagger.json)
+[OPENAPI](https://github.com/Rubber-Duck-999/data-service/main/swagger.json)
 
 ## Service
 
