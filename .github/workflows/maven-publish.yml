@@ -24,5 +24,4 @@ jobs:
         settings-path: ${{ github.workspace }} # location for the settings.xml file
 
     - name: Build with Maven
-      run: cd data-service |
-        mvn -B package
+      run: cd data-service && mvn -B package
