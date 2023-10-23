@@ -6,7 +6,7 @@ name: Maven Package
 on:
   push:
     paths:
-      - dataservice/*
+      - data-service/*
     branches:
       - '*'
       - '!main'
