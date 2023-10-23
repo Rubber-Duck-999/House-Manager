@@ -32,5 +32,5 @@ jobs:
       run: ls && pwd
 
     - name: Pull
-      run: mvn compile
+      run: docker compose up -d
 
