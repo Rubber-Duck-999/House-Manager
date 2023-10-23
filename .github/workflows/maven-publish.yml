@@ -25,3 +25,9 @@ jobs:
 
     - name: Build with Maven
       run: cd data-service && mvn -B package
+  deploy:
+    runs-on: [self-hosted, linux, ARM64]
+    steps:
+    - name: Test Runner
+      run: ls
+
