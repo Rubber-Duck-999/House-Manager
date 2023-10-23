@@ -28,6 +28,7 @@ jobs:
   deploy:
     runs-on: [self-hosted, linux, ARM64]
     steps:
+    - uses: actions/checkout@v3
     - name: Test Runner
       run: ls && pwd
 
