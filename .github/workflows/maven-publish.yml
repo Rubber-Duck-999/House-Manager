@@ -29,5 +29,8 @@ jobs:
     runs-on: [self-hosted, linux, ARM64]
     steps:
     - name: Test Runner
-      run: ls
+      run: ls && pwd
+
+    - name: Pull
+      run: mvn compile
 
