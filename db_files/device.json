@@ -1,9 +1,20 @@
-{
-    "id": "0001",
-    "name": "Phone",
-    "ipAddress": "192.168.0.1",
-    "macAddress": "AF",
-    "createdBy": "user",
-    "type": "phone",
-    "online": true
-}
+[
+    {
+        "id": "0001",
+        "name": "Phone",
+        "ipAddress": "192.168.0.1",
+        "macAddress": "AF",
+        "createdBy": "user",
+        "type": "phone",
+        "online": true
+    },
+    {
+        "id": "0002",
+        "name": "Phone",
+        "ipAddress": "192.168.0.1",
+        "macAddress": "AF",
+        "createdBy": "user",
+        "type": "phone",
+        "online": true
+    },
+]
