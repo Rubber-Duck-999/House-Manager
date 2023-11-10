@@ -9,12 +9,19 @@ on:
       - 'main'
 
 jobs:
-  deploy:
+  deploy_manager:
     runs-on: [self-hosted, linux, ARM64]
     steps:
     - uses: actions/checkout@v3
-    - name: Test Runner
+    - name: Check Files
       run: ls && pwd
     - name: Pull
       run: docker compose pull |
           docker compose down
+
+  deploy_mood:
+    runs-on: [self-hosted, linux, ARM64]
+    steps:
+    - uses: actions/checkout@v3
+    - name: Enter SSH
+      run: ssh pi@192.168.0.100
