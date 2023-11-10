@@ -1,7 +1,8 @@
 # House Manager
 
-[![Maven Pipeline](https://github.com/Rubber-Duck-999/RestService/actions/workflows/maven-publish.yml/badge.svg)](https://github.com/Rubber-Duck-999/RestService/actions/workflows/maven-develop.yml)
-[![DEploy](https://github.com/Rubber-Duck-999/RestService/actions/workflows/docker-deploy.yml/badge.svg)](https://github.com/Rubber-Duck-999/RestService/actions/workflows/docker-deploy.yml)
+[![Maven Package](https://github.com/Rubber-Duck-999/House-Manager/actions/workflows/maven-develop.yml/badge.svg)](https://github.com/Rubber-Duck-999/House-Manager/actions/workflows/maven-develop.yml)
+
+[![Docker Deploy](https://github.com/Rubber-Duck-999/House-Manager/actions/workflows/docker-deploy.yml/badge.svg)](https://github.com/Rubber-Duck-999/House-Manager/actions/workflows/docker-deploy.yml)
 
 Stack used to manage house services
 
