@@ -1,9 +1,10 @@
-# This workflow will build a package using Maven and then publish it to GitHub packages when a release is created
-# For more information see: https://github.com/actions/setup-java/blob/main/docs/advanced-usage.md#apache-maven-with-a-settings-path
-
 name: Maven Package
 
-on: [push]
+on:
+  push:
+    branches:
+      - '*'
+      - '!main'
 
 jobs:
   audit:
@@ -33,17 +34,7 @@ jobs:
         distribution: 'temurin'
         server-id: github # Value of the distributionManagement/repository/id field of the pom.xml
         settings-path: ${{ github.workspace }} # location for the settings.xml file
-
     - name: Build with Maven
       run: cd data-service && mvn -B package
-  deploy:
-    runs-on: [self-hosted, linux, ARM64]
-    needs: build
-    steps:
-    - uses: actions/checkout@v3
-    - name: Test Runner
-      run: ls && pwd
-    - name: Pull
-      run: docker compose pull |
-          docker compose down
+
 
