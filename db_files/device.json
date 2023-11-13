@@ -1,20 +1,29 @@
 [
     {
         "id": "0001",
-        "name": "Phone",
-        "ipAddress": "192.168.0.1",
+        "name": "Server 1",
+        "ipAddress": "192.168.0.4",
         "macAddress": "AF",
+        "model": "PI 4 2GB",
         "createdBy": "user",
-        "type": "phone",
         "online": true
     },
     {
         "id": "0002",
-        "name": "Phone",
-        "ipAddress": "192.168.0.1",
+        "name": "Server 2",
+        "ipAddress": "192.168.0.100",
         "macAddress": "AF",
+        "model": "PI 4 4GB",
         "createdBy": "user",
-        "type": "phone",
         "online": true
     },
+    {
+        "id": "0002",
+        "name": "Server 2",
+        "ipAddress": "192.168.0.100",
+        "macAddress": "AF",
+        "model": "PI 4 4GB",
+        "createdBy": "user",
+        "online": true
+    }
 ]
